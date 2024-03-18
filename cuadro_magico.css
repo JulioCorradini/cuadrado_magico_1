@@ -1,0 +1,40 @@
+#container {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  #instructions {
+    margin-bottom: 20px;
+  }
+  
+  #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .cell {
+    width: 90px;
+    height: 90px;
+    background-color: lightgray;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px; /* Ajusta el tamaño del texto según sea necesario */
+  }
+  
+  .cell.circular {
+    border-radius: 50%; /* Para asegurar que los casilleros existentes también sean circulares */
+  }
+  
+  .number {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: lightblue;
+    margin: 5px;
+    cursor: pointer;
+  }
