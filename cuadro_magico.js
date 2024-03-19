@@ -104,7 +104,7 @@ agregarNumeros();
         sumaColumnas.every(suma => suma === sumaTotal) &&
         sumaDiagonal1 === sumaTotal &&
         sumaDiagonal2 === sumaTotal) {
-      alert("¡Ganaste!");
+      alert("¡Ganaste!"); // ESTO TIENE QUE SER UN MENSAJE QUE SE MUESTRE EN PANTALLA.
     }
   }
   

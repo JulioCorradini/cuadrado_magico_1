@@ -29,6 +29,10 @@
   .circular {
     border-radius: 50%; /* Para asegurar que los casilleros existentes también sean circulares */
   }
+
+  .invisilbe {
+    display: none;
+  }
   
   .number {
     display: inline-block;
