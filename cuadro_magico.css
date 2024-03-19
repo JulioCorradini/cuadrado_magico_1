@@ -10,12 +10,12 @@
   
   #grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 5px;
     margin-bottom: 20px;
   }
-  
-  .cell {
+
+  .cell, .circular {
     width: 90px;
     height: 90px;
     background-color: lightgray;
@@ -23,10 +23,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px; /* Ajusta el tamaño del texto según sea necesario */
+    font-size: 24px;
   }
   
-  .cell.circular {
+  .circular {
     border-radius: 50%; /* Para asegurar que los casilleros existentes también sean circulares */
   }
   

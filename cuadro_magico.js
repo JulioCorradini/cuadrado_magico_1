@@ -93,6 +93,10 @@ agregarNumeros();
     document.getElementById("circular4").textContent = sumaColumnas[0];
     document.getElementById("circular5").textContent = sumaColumnas[1];
     document.getElementById("circular6").textContent = sumaColumnas[2];
+
+    // Asignar las sumas de las diagoneales a los casilleros cirucalres coresponidientes
+    document.getElementById("circularDiagonal1").textContent = sumaDiagonal1;
+    document.getElementById("circularDiagonal2").textContent = sumaDiagonal2;
   
     // Verificar si todas las sumas son iguales
     const sumaTotal = sumaFilas[0];

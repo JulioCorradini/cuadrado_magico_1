@@ -11,29 +11,32 @@
     <div id="instructions">Haz click en un número y luego en un casillero para posicionarlo.</div>
     <div id="textoDeResultado"></div>
     <div id="grid">
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="cell" onclick="placeNumber(this)"></div>
 
       <div class="cell" onclick="placeNumber(this)"></div>
       <div class="cell" onclick="placeNumber(this)"></div>
       <div class="cell" onclick="placeNumber(this)"></div>
+      <div class="circular" id="circular1"></div> <!-- Casillero Circular fila 1 -->
 
       <div class="cell" onclick="placeNumber(this)"></div>
       <div class="cell" onclick="placeNumber(this)"></div>
       <div class="cell" onclick="placeNumber(this)"></div>
+      <div class="circular" id="circular2"></div> <!-- Casillero Circular fila 2-->
+
+      <div class="cell" onclick="placeNumber(this)"></div>
+      <div class="cell" onclick="placeNumber(this)"></div>
+      <div class="cell" onclick="placeNumber(this)"></div>
+      <div class="circular" id="circular3"></div> <!-- Casillero Circular fila 3-->
+
+      <div class="circular" id="circular4"></div> <!-- Casillero Circular columna 1-->
+      <div class="circular" id="circular5"></div> <!-- Casillero Circular columna 2-->
+      <div class="circular" id="circular6"></div> <!-- Casillero Circular columna 3-->
 
     </div>
     <div id="numbers">
 
     </div>
-    <div class="circular-container">
-      <div class="cell circular" id="circular1"></div> <!-- Csillero Circular -->
-      <div class="cell circular" id="circular2"></div> <!-- Csillero Circular -->
-      <div class="cell circular" id="circular3"></div> <!-- Csillero Circular -->
-      <div class="cell circular" id="circular4"></div> <!-- Csillero Circular -->
-      <div class="cell circular" id="circular5"></div> <!-- Csillero Circular -->
-      <div class="cell circular" id="circular6"></div> <!-- Csillero Circular -->
+      <div class="cell circular" id="circularDiagonal1"></div> <!--Casillero Cirucular diagonal 1-->
+      <div class="cell circular" id="circularDiagonal2"></div> <!--Casillero Circular diagonal 2-->
     </div>
   </div>
   <script src="cuadro_magico.js"></script>
