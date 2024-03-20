@@ -64,7 +64,7 @@ function generateRandomNumbers() {
 function agregarNumeros() {
   const numbersContainer = document.getElementById("numbers");
   const numeros = generateRandomNumbers();
-  
+
   for (let numero of numeros) {
     const divNumero = document.createElement("div");
     divNumero.classList.add("number");
@@ -84,6 +84,7 @@ agregarNumeros();
 
 // Función para calcular la suma de las filas, columnas y diagonales.
 function calcularSumaFilasColumnasDiagonales() {
+  const textGanaste = document.getElementById("textoGanaste");
   const gridCells = document.querySelectorAll(".cell");
   const sumaFilas = [0, 0, 0];
   const sumaColumnas = [0, 0, 0];
@@ -127,7 +128,7 @@ function calcularSumaFilasColumnasDiagonales() {
       sumaColumnas.every(suma => suma === sumaTotal) &&
       sumaDiagonal1 === sumaTotal &&
       sumaDiagonal2 === sumaTotal) {
-    alert("¡Ganaste!"); // ESTO TIENE QUE SER UN MENSAJE QUE SE MUESTRE EN PANTALLA.
+    textGanaste.style.display = "block";
   }
 
 }
