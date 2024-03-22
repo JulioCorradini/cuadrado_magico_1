@@ -25,10 +25,18 @@
     align-items: center;
     font-size: 24px;
   }
+
+  .cell.numbered {
+    background-color: rgba(255, 0, 0, 0.5); /* Nuevo color cuando hay un número */
+  }
   
   .circular {
     border-radius: 50%; /* Para asegurar que los casilleros existentes también sean circulares */
     background-color: rgb(189, 48, 48);
+  }
+
+  .circular.match-sum {
+    background-color: lightgreen;
   }
 
   .invisilbe {
@@ -43,6 +51,25 @@
     margin: 5px;
     cursor: pointer;
   }
+
+
+.number.bounce {
+  animation: bounceAnimation 0.5s ease;
+}
+
+
+@keyframes bounceAnimation {
+  0% {
+    transform: scale(0.8);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 
   #textoGanaste {
     display: none;

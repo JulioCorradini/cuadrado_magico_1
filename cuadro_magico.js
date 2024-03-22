@@ -71,6 +71,10 @@ function agregarNumeros() {
     divNumero.textContent = numero;
     divNumero.onclick = function() {
       pickNumber(this);
+      this.classList.add("bounce");
+      setTimeout(() => {
+        this.classList.remove("bounce");
+      }, 500);
     };
     numbersContainer.appendChild(divNumero);
   }
@@ -155,5 +159,24 @@ function placeNumber(cell) {
     cell.textContent = selectedNumber;
     selectedNumber = "";
     calcularSumaFilasColumnasDiagonales();
+  }
+
+  // Obtener el resultado mágico actual
+  const resultado = parseFloat(document.getElementById("textoDeResultado").textContent.match(/\d+(\.\d+)?/)[0]);
+  // Actualizar el color de fondo de los elementos circulares si la suma coincide
+  const circularElements = document.querySelectorAll(".circular");
+  circularElements.forEach(element => {
+    const valor = parseInt(element.textContent);
+    if (!isNaN(valor) && valor === resultado) {
+      element.classList.add("match-sum"); // Agregar clase para coincidencia de suma
+    } else {
+      element.classList.remove("match-sum"); // Quitar clase si no coincide
+    }
+  });
+
+  if (cell.textContent !==""){
+    cell.classList.add("numbered"); // Agregar la clase "numbered" al colocar un número
+  }else {
+    cell.classList.remove("numbered"); // Quitar la clase "numbered" al quitar el número
   }
 }
