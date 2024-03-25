@@ -70,6 +70,10 @@
   }
 }
 
+.number.selected {
+  background-color: rgb(160, 17, 173);
+}
+
 
   #textoGanaste {
     display: none;

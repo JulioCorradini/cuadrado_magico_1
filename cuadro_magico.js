@@ -179,4 +179,20 @@ function placeNumber(cell) {
   }else {
     cell.classList.remove("numbered"); // Quitar la clase "numbered" al quitar el número
   }
+
+  // Pintar los números cuando se encuentran en el cuadro.
+  const numbers = document.querySelectorAll(".number");
+  numbers.forEach(numbersElement => {
+    numbersElement.classList.remove("selected");
+  });
+  const squareNumbers = document.querySelectorAll(".cell");
+  squareNumbers.forEach(squareElement => {
+    const cellValue = parseInt(squareElement.textContent);
+    numbers.forEach(numbersElement => {
+      const numbersValue = parseInt(numbersElement.textContent);
+      if (numbersValue === cellValue) {
+        numbersElement.classList.add("selected");
+      }
+    });
+  });
 }
