@@ -132,7 +132,7 @@ function calcularSumaFilasColumnasDiagonales() {
       sumaColumnas.every(suma => suma === sumaTotal) &&
       sumaDiagonal1 === sumaTotal &&
       sumaDiagonal2 === sumaTotal) {
-    textGanaste.style.display = "block";
+    mostrarMensajeGanador();
   }
 
 }
@@ -180,6 +180,14 @@ function placeNumber(cell) {
     cell.classList.remove("numbered"); // Quitar la clase "numbered" al quitar el número
   }
 
+  // Agregar la clase "bounce" al hacer clic en el casillero
+  cell.classList.add("bounce");
+
+  // Quitar la clase "bounce" después de 500 milisegundos
+  setTimeout(() => {
+    cell.classList.remove("bounce");
+  }, 500);
+
   // Pintar los números cuando se encuentran en el cuadro.
   const numbers = document.querySelectorAll(".number");
   numbers.forEach(numbersElement => {
@@ -195,4 +203,14 @@ function placeNumber(cell) {
       }
     });
   });
+}
+
+// Mostrar el mensaje de ganador y ocultar todos los demás elementos
+function mostrarMensajeGanador() {
+  const mensajeGanador = document.getElementById("textoGanaste");
+  mensajeGanador.style.display = "block";
+
+  // Ocultar todos los demás elementos
+  const container = document.getElementById("container");
+  container.style.display = "none";
 }

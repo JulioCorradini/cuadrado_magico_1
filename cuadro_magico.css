@@ -1,3 +1,13 @@
+body {
+  background: linear-gradient(to bottom right, rgb(245, 161, 245), #5a025a);
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #container {
     width: 300px;
     margin: 0 auto;
@@ -15,6 +25,11 @@
     margin-bottom: 20px;
   }
 
+  .cell {
+    border-radius: 20%;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
+  }  
+
   .cell, .circular {
     width: 90px;
     height: 90px;
@@ -29,14 +44,31 @@
   .cell.numbered {
     background-color: rgba(255, 0, 0, 0.5); /* Nuevo color cuando hay un número */
   }
+
+  .cell.bounce {
+    animation: cellBounceAnimation 0.5s ease;
+  }
+  
+  
+  @keyframes cellBounceAnimation {
+    0% {
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
   
   .circular {
-    border-radius: 50%; /* Para asegurar que los casilleros existentes también sean circulares */
-    background-color: rgb(189, 48, 48);
+    border-radius: 50%;
+    background: linear-gradient(to bottom right, rgba(255, 0, 0, 0.5), rgba(53, 51, 51, 0.473));
   }
 
   .circular.match-sum {
-    background-color: lightgreen;
+    background: linear-gradient(to bottom right, rgb(89, 233, 89), rgba(53, 51, 51, 0.473));
   }
 
   .invisilbe {
@@ -47,9 +79,11 @@
     display: inline-block;
     width: 30px;
     height: 30px;
+    border-radius: 20%;
     background-color: lightblue;
     margin: 5px;
     cursor: pointer;
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.5));
   }
 
 
@@ -71,10 +105,25 @@
 }
 
 .number.selected {
-  background-color: rgb(160, 17, 173);
+  background-color: rgb(247, 5, 146);
 }
 
+#textoGanaste {
+  height: 25%;
+  width: 25%;
+  align-content: center;
+  font-size: 40px;
+  animation: fadeInOut 3s ease-in-out forwards;
+  display: none;
+}
 
-  #textoGanaste {
-    display: none;
+@keyframes fadeInOut {
+  from {
+    opacity: 0;
+    left: -100px;
   }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
