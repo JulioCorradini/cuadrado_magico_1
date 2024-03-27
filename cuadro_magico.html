@@ -45,11 +45,22 @@
 
     </div>
 
+    <div id="divButtonNuevojuego">
+      <button id="buttonNuevoJuego" onclick="nuevoJuego()">Nuevo Juego</button>
+    </div>
+
   </div>
-  <div id="textoGanaste">
-    Felicidades!!!<br>
-    Lo conseguiste!!!
+
+  <div id="hiddenContainer">
+    <div id="textoGanaste">
+      !!!Felicidades lo lograste!!!
+    </div>
+    <div id="divButtonVolverAJugar">
+      <button id="buttonVolverAJugar" onclick="nuevoJuego()">Volver a Jugar</button>
+    </div>
   </div>
+
+  <audio id="victory-sound" src="fireWorks.mp3"></audio>
 
   <script src="cuadro_magico.js"></script>
 </body>

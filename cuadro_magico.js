@@ -207,10 +207,48 @@ function placeNumber(cell) {
 
 // Mostrar el mensaje de ganador y ocultar todos los demás elementos
 function mostrarMensajeGanador() {
-  const mensajeGanador = document.getElementById("textoGanaste");
+  const mensajeGanador = document.getElementById("hiddenContainer");
   mensajeGanador.style.display = "block";
+
+  // Reproducir el sonido de victoria
+  const victorySound = document.getElementById("victory-sound");
+  victorySound.play();
+  
+  // Mostrar fuegos artificiales
+  // Colores disponibles
+  const colores = ["#FF5733", "#FFC300", "#DAF7A6", "#48C9B0", "#85C1E9", "#BB8FCE", "#F1948A"];
+
+  // Función para obtener una posición aleatoria dentro del rango dado
+  function getRandomPosition(max) {
+    return Math.floor(Math.random() * max);
+  }
+
+  for (let i = 0; i < 20; i++) {
+    const firework = document.createElement("div");
+    firework.classList.add("firework");
+    firework.style.left = getRandomPosition(window.innerWidth) + "px";
+    firework.style.top = getRandomPosition(window.innerHeight) + "px";
+    const tamaño = Math.random() * 100 + 10 + "px";
+    firework.style.width = tamaño;
+    firework.style.height = tamaño;
+    const color = colores[Math.floor(Math.random() * colores.length)];
+    firework.style.backgroundColor = color;
+    document.body.appendChild(firework);
+
+    const sparkle = document.createElement("div");
+    sparkle.classList.add("sparkle");
+    firework.appendChild(sparkle);
+  }
 
   // Ocultar todos los demás elementos
   const container = document.getElementById("container");
   container.style.display = "none";
+}
+
+// Función para crear un nuevo Juego al apretar el botón.
+function nuevoJuego() {
+
+  // Recargar la página.
+  window.location.reload();
+
 }

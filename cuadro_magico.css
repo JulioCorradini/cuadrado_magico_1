@@ -12,6 +12,8 @@ body {
     width: 300px;
     margin: 0 auto;
     text-align: center;
+    /*//////////////////////*/
+    /*display: none;*/
   }
   
   #instructions {
@@ -108,13 +110,42 @@ body {
   background-color: rgb(247, 5, 146);
 }
 
-#textoGanaste {
-  height: 25%;
-  width: 25%;
+#divButtonNuevojuego {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+#buttonNuevoJuego {
+  width: 50%;
+  height: 50px;
+  background-color: rgb(161, 6, 6);
+  border-radius: 10%;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease;
+}
+
+#buttonNuevoJuego:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#buttonNuevoJuego:active {
+  transform: scale(0.8);
+}
+
+#hiddenContainer {
+  display: flex;
   align-content: center;
+  flex-direction: column;
+  display: none;
+  /*display: block;*/
+}
+
+#textoGanaste {
   font-size: 40px;
   animation: fadeInOut 3s ease-in-out forwards;
-  display: none;
 }
 
 @keyframes fadeInOut {
@@ -127,3 +158,73 @@ body {
     left: 0;
   }
 }
+
+#divButtonVolverAJugar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5%;
+}
+
+#buttonVolverAJugar {
+  width: 50%;
+  height: 50px;
+  background-color: rgb(161, 6, 6);
+  border-radius: 10%;
+  border: 2px solid transparent;
+  transition: transform 0.3s ease;
+}
+
+#buttonVolverAJugar:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#buttonVolverAJugar:active {
+  transform: scale(0.8);
+}
+
+@keyframes fireworks {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.firework {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: fireworks 1s ease-out infinite;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+    /*background-color: #ff0000;*/
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.5;
+    /*background-color: #ffff00;*/
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+.sparkle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: sparkle 1s ease-out infinite;
+}
+
