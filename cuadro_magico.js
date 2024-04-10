@@ -139,6 +139,7 @@ function calcularSumaFilasColumnasDiagonales() {
 
 
 let selectedNumber = null;
+let selectedNumbers = new Set();
 
 function pickNumber(element) {
   selectedNumber = element.textContent;
@@ -157,6 +158,27 @@ function isNumberInGrid(number) {
 function placeNumber(cell) {
   if (selectedNumber !== null && !isNumberInGrid(selectedNumber)) {
     cell.textContent = selectedNumber;
+
+    // Encuentra todos los elementos con la clase 'number'
+    const allNumbers = document.querySelectorAll('.number');
+
+    // Recorre todos los elementos y aplica la clase 'number-placed' a los que coincidan con el número seleccionado
+    allNumbers.forEach((element) => {
+      /*if (element.textContent === selectedNumber) {
+        element.classList.add('number-placed');
+      } else {
+        element.classList.remove('number-placed');
+      }*/
+      if (selectedNumbers.has(element.textContent)) {
+        element.classList.add('number-placed');
+      } else {
+        element.classList.remove('number-placed');
+      }
+    });
+
+    // Agrego el número posicionado en el set.
+    selectedNumbers.push(selectedNumber);
+
     selectedNumber = "";
     calcularSumaFilasColumnasDiagonales();
   }

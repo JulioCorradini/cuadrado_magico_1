@@ -52,6 +52,10 @@
     cursor: pointer;
   }
 
+  .number-placed {
+    background-color: rgb(192, 73, 192) !important; /* Usamos !important para sobrescribir otros estilos de fondo */
+  }
+  
 
 .number.bounce {
   animation: bounceAnimation 0.5s ease;
