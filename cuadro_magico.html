@@ -9,45 +9,51 @@
 <body>
   <div id="container">
 
-    <div id="instructions">Haz click en un número y luego en un casillero para posicionarlo.</div>
+    <div id="containerNumeros">
 
-    <div id="textoDeResultado"></div>
-
-    <div id="grid">
-      <div class="inviseble"></div>
-      <div class="invisible"></div>
-      <div class="invisible"></div>
-      <div class="circular" id="circularDiagonal2"></div> <!--Casillero Cirucular diagonal 2-->
-
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="circular" id="circular1"></div> <!-- Casillero Circular fila 1 -->
-
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="circular" id="circular2"></div> <!-- Casillero Circular fila 2-->
-
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="cell" onclick="placeNumber(this)"></div>
-      <div class="circular" id="circular3"></div> <!-- Casillero Circular fila 3-->
-
-      <div class="circular" id="circular4"></div> <!-- Casillero Circular columna 1-->
-      <div class="circular" id="circular5"></div> <!-- Casillero Circular columna 2-->
-      <div class="circular" id="circular6"></div> <!-- Casillero Circular columna 3-->
-
-      <div class="circular" id="circularDiagonal1"></div> <!--Casillero Cirucular diagonal 1-->
+      <div id="instructions">Haz click en un número y luego en un casillero para posicionarlo.</div>
+  
+      <div id="numbers">
+  
+      </div>
     </div>
+    
+    <div id="containerTablero">
+      <div id="textoDeResultado"></div>
 
-    <div id="numbers">
+      <div id="grid">
+        <div class="inviseble"></div>
+        <div class="invisible"></div>
+        <div class="invisible"></div>
+        <div class="circular" id="circularDiagonal2"></div> <!--Casillero Cirucular diagonal 2-->
 
-    </div>
+        <div class="cell" onclick="placeNumber(this)"></div>
+        <div class="cell" onclick="placeNumber(this)"></div>
+        <div class="cell" onclick="placeNumber(this)"></div>
+        <div class="circular" id="circular1"></div> <!-- Casillero Circular fila 1 -->
+
+        <div class="cell" onclick="placeNumber(this)"></div>
+        <div class="cell" onclick="placeNumber(this)"></div>
+        <div class="cell" onclick="placeNumber(this)"></div>
+        <div class="circular" id="circular2"></div> <!-- Casillero Circular fila 2-->
+
+        <div class="cell" onclick="placeNumber(this)"></div>
+        <div class="cell" onclick="placeNumber(this)"></div>
+        <div class="cell" onclick="placeNumber(this)"></div>
+        <div class="circular" id="circular3"></div> <!-- Casillero Circular fila 3-->
+
+        <div class="circular" id="circular4"></div> <!-- Casillero Circular columna 1-->
+        <div class="circular" id="circular5"></div> <!-- Casillero Circular columna 2-->
+        <div class="circular" id="circular6"></div> <!-- Casillero Circular columna 3-->
+
+        <div class="circular" id="circularDiagonal1"></div> <!--Casillero Cirucular diagonal 1-->
+      </div>
 
     <div id="divButtonNuevojuego">
       <button id="buttonNuevoJuego" onclick="nuevoJuego()">Nuevo Juego</button>
     </div>
+    
+  </div>
 
   </div>
 

@@ -8,12 +8,35 @@ body {
   justify-content: center;
 }
 
-#container {
+/*#container {
     width: 300px;
     margin: 0 auto;
     text-align: center;
-    /*//////////////////////*/
-    /*display: none;*/
+  }*/
+  #container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #containerNumeros,
+  #containerTablero {
+    width: 100%;
+  }
+
+  
+  @media screen and (min-width: 768px) {
+    #container {
+      flex-direction: row;
+    }
+
+    #containerNumeros,
+    #containerTablero {
+      width: 50%;
+    }
   }
   
   #instructions {
@@ -75,6 +98,18 @@ body {
 
   .invisilbe {
     display: none;
+  }
+
+  #numbers {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección de la disposición a columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+  }
+
+  @media screen and (max-width: 767px) {
+    #numbers {
+      flex-direction: row; /* Cambia la dirección de la disposición a fila */
+    }
   }
   
   .number {
