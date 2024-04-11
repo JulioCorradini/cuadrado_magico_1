@@ -1,0 +1,6 @@
+1- Hay que arreglar el problema de que cuando se quitan todos los númeos del tablero, aparece el mensaje de victoria.
+2- Arreglar la separación de los cuadrados y los números cuando se achica la resolución de la pantalla.
+3- Hay que centrar los núemros de los caudraditos.
+4- Hay que agregar los textos.
+5- Hay que modificar las fuentes de los textos.
+6- Hay que agregar y posicionar el logo.
